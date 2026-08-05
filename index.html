@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chùa Nguyễn Hoàng Hải Long - Niệm Phật Đường</title>
+    <!-- Google Fonts & FontAwesome cho giao diện Ultra HD -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #8B5A2B;
+            --secondary-color: #D4AF37;
+            --dark-color: #2C221E;
+            --light-color: #F9F6F0;
+            --accent-color: #C0392B;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            line-height: 1.6;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(rgba(44, 34, 30, 0.85), rgba(44, 34, 30, 0.85)), url('https://images.unsplash.com/photo-1545128485-c400e7702796?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            border-bottom: 5px solid var(--secondary-color);
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        header p {
+            font-size: 1rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        nav {
+            background-color: var(--primary-color);
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 10px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            font-weight: 500;
+            transition: 0.3s;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 4px;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        /* Section Styling */
+        section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-left: 5px solid var(--secondary-color);
+        }
+
+        section h2 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        section h2 i {
+            color: var(--secondary-color);
+        }
+
+        /* Grid Services / Activities */
+        .grid-cards {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+
+        .card {
+            background: var(--light-color);
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #e2dcd0;
+        }
+
+        .card h3 {
+            color: var(--primary-color);
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        /* Contact & Info */
+        .info-list {
+            list-style: none;
+        }
+
+        .info-list li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .info-list li i {
+            color: var(--primary-color);
+            margin-top: 4px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 0.9rem;
+            border-top: 3px solid var(--secondary-color);
+        }
+
+        /* Responsive for tablets/desktops */
+        @media(min-width: 768px) {
+            .grid-cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            header h1 {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Banner chính -->
+    <header>
+        <h1>Chùa Nguyễn Hoàng Hải Long</h1>
+        <p>Niệm Phật Đường - Thanh tịnh - Từ bi - Trí tuệ</p>
+    </header>
+
+    <!-- Menu Điều Hướng -->
+    <nav>
+        <a href="#gioithieu"><i class="fas fa-home"></i> Giới Thiệu</a>
+        <a href="#hoatdong"><i class="fas fa-hands-praying"></i> Phật Sự</a>
+        <a href="#thongbao"><i class="fas fa-bullhorn"></i> Thông Báo</a>
+        <a href="#lienhe"><i class="fas fa-map-marker-alt"></i> Liên Hệ</a>
+    </nav>
+
+    <div class="container">
+        
+        <!-- Giới thiệu -->
+        <section id="gioithieu">
+            <h2><i class="fas fa-om"></i> Giới Thiệu Chung</h2>
+            <p>Nam Mô Bổn Sư Thích Ca Mâu Ni Phật!</p>
+            <p style="margin-top: 10px;">Chùa Nguyễn Hoàng Hải Long (Niệm Phật Đường) là chốn tâm linh thanh tịnh, nơi Phật tử và bà nhân gần xa quay về tụng kinh, niệm Phật, thực hành lời Phật dạy, nuôi dưỡng tâm từ bi và tìm lại sự bình an trong tâm hồn.</p>
+        </section>
+
+        <!-- Hoạt động Phật sự -->
+        <section id="hoatdong">
+            <h2><i class="fas fa-calendar-alt"></i> Các Hoạt Động Phật Sự</h2>
+            <div class="grid-cards">
+                <div class="card">
+                    <h3><i class="fas fa-book-open"></i> Đạo Tràng Tụng Kinh</h3>
+                    <p>Thời khóa tu tập định kỳ hằng tuần giúp phật tử thực hành chánh niệm, buông bỏ phiền não.</p>
+                </div>
+                <div class="card">
+                    <h3><i class="fas fa-hand-holding-heart"></i> Từ Thiện Xã Ḥi</h3>
+                    <p>Các chương trình thiện nguyện, phát quà cứu trợ, chia sẻ khó khăn với bà con nghèo vùng sâu vùng xa.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Thông báo tu học -->
+        <section id="thongbao">
+            <h2><i class="fas fa-bell"></i> Thông Báo Tu Học</h2>
+            <ul class="info-list">
+                <li>
+                    <i class="fas fa-check-circle"></i>
+                    <div><strong>Khóa tu niệm Phật:</strong> Tổ chức vào các ngày Chủ Nhật hàng tuần từ 8:00 sáng.</div>
+                </li>
+                <li>
+                    <i class="fas fa-check-circle"></i>
+                    <div><strong>Lễ Sám Hối:</strong> Định kỳ vào ngày 14 và 30 (hoặc 29) Âm lịch mỗi tháng.</div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Liên hệ & Địa chỉ -->
+        <section id="lienhe">
+            <h2><i class="fas fa-map-marked-alt"></i> Thông Tin Liên Hệ</h2>
+            <ul class="info-list">
+                <li>
+                    <i class="fas fa-location-dot"></i>
+                    <div><strong>Địa chỉ:</strong> Ấp Tân An, Xã Tân Thành Bình,Tỉnh Vĩnh Long - Chùa Nguyễn Hoàng Hải Long.</div>
+                </li>
+                <li>
+                    <i class="fas fa-phone"></i>
+                    <div><strong>Điện thoại liên hệ:</strong> (0327770315)</div>
+                </li>
+                <li>
+                    <i class="fas fa-envelope"></i>
+                    <div><strong>Email:</strong> chuchuanguynhoanghailong@gmail.com</div>
+                </li>
+            </ul>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Chùa Nguyễn Hoàng Hải Long. Nam Mô A Di Đà Phật.</p>
+    </footer>
+
+</body>
+</html>
