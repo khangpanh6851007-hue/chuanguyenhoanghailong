@@ -3,126 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bi Chuyên Nháy Người Khác - Dịch Vụ Nói Theo Yêu Cầu</title>
+    <title>Bi Chuyên Nháy Người Khác - v3.3.0 (Google Voice Edition)</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         .version-badge {
-            background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+            background: linear-gradient(135deg, #3b82f6 0%, #ec4899 100%);
+        }
+        .mic-pulse {
+            animation: pulse-ring 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse-ring {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.15); opacity: 0.7; }
+            100% { transform: scale(1); opacity: 1; }
         }
     </style>
 </head>
-<body class="bg-slate-950 text-slate-100 font-sans min-h-screen flex flex-col justify-between selection:bg-purple-500 selection:text-white">
+<body class="bg-slate-950 text-slate-100 font-sans min-h-screen flex flex-col justify-between selection:bg-blue-500 selection:text-white">
 
     <!-- HEADER / NAVIGATION -->
     <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-50">
         <div class="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-3">
-                <div class="w-10 h-10 rounded-xl bg-purple-600 flex items-center justify-center font-bold text-lg shadow-lg shadow-purple-500/30">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-pink-600 flex items-center justify-center font-bold text-lg shadow-lg shadow-blue-500/30">
                     B
                 </div>
                 <div>
                     <h1 class="font-bold text-base tracking-wide">Nguyễn Hoàng Hải Long</h1>
-                    <p class="text-xs text-purple-400 font-medium">Biệt danh: Bi Chuyên Nháy</p>
+                    <p class="text-xs text-blue-400 font-medium">Biệt danh: Bi Chuyên Nháy (Google Voice AI)</p>
                 </div>
             </div>
             <div class="flex items-center space-x-2">
-                <span class="version-badge text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider shadow">
-                    v3.1.5 (Bi Thích Nháy)
+                <span class="version-badge text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow">
+                    v3.3.0 (Google Speech)
                 </span>
             </div>
         </div>
     </header>
 
     <!-- MAIN CONTAINER -->
-    <main class="max-w-5xl mx-auto px-4 py-8 flex-grow w-full space-y-10">
+    <main class="max-w-5xl mx-auto px-4 py-8 flex-grow w-full space-y-8">
 
         <!-- HERO SECTION -->
-        <section class="text-center space-y-4 py-6">
-            <div class="inline-block bg-purple-950/60 border border-purple-800/50 text-purple-300 text-xs px-3 py-1 rounded-full mb-2">
-                <i class="fa-solid fa-bolt mr-1 text-yellow-400"></i> Dịch vụ độc quyền: Nháy câu chữ đỉnh cao
+        <section class="text-center space-y-3 py-4">
+            <div class="inline-block bg-blue-950/60 border border-blue-800/50 text-blue-300 text-xs px-3.5 py-1 rounded-full">
+                <i class="fa-solid fa-volume-high mr-1 text-pink-400"></i> Phiên bản v3.3.0: Tích hợp phát âm chuẩn giọng chị Google (vi-VN)
             </div>
             <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight">
-                Bạn Nói Gì - <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">Tôi Nháy Lại Y Hệt</span>
+                Nháy Lại & Phát Âm <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-pink-500">Giọng Chị Google</span>
             </h2>
             <p class="text-slate-400 max-w-xl mx-auto text-sm md:text-base">
-                Chuyên cung cấp dịch vụ thuê người nháy lại mọi câu nói, ngữ điệu và phát ngôn theo đúng ý bạn muốn một cách chân thực nhất.
+                Nhập văn bản hoặc nói vào micro để Long tiến hành nháy lại, đồng thời tự động phát ra âm thanh bằng giọng đọc tổng hợp tiếng Việt cực kỳ quen thuộc!
             </p>
         </section>
 
-        <!-- INTERACTIVE DEMO / TESTER SECTION -->
-        <section class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-2xl relative overflow-hidden">
-            <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-purple-600/10 rounded-full blur-3xl pointer-events-none"></div>
+        <!-- INTERACTIVE TOOL: VOICE & TEXT MATCHER -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             
-            <h3 class="text-lg font-bold mb-4 flex items-center text-purple-300">
-                <i class="fa-solid fa-wand-magic-sparkles mr-2"></i> Trải Nghiệm Thử Dịch Vụ (Mô Phỏng v3.1.5)
-            </h3>
-            
-            <div class="space-y-4">
+            <!-- TOOL 1: NHÁY BẰNG GIỌNG NÓI & ĐỌC LẠI -->
+            <section class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl flex flex-col justify-between">
                 <div>
-                    <label for="userSaid" class="block text-xs font-semibold text-slate-400 uppercase mb-1">Nhập câu nói của bạn:</label>
-                    <input type="text" id="userSaid" placeholder="Ví dụ: Hôm nay thời tiết đẹp quá đi mất!" 
-                        class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-purple-500 transition">
+                    <h3 class="text-base font-bold mb-2 flex items-center text-blue-300">
+                        <i class="fa-solid fa-microphone mr-2 text-pink-500"></i> Nháy Giọng Nói & Đọc Bằng Chị Google
+                    </h3>
+                    <p class="text-xs text-slate-400 mb-6">Bấm ghi âm, nói câu nói của bạn. Long sẽ nghe, ghi nhận văn bản và dùng giọng nói chuẩn Google để đọc lại y hệt.</p>
                 </div>
-                <button onclick="nguoiKhacNoiYNuTheVay()" 
-                    class="w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 font-bold py-3 rounded-xl text-sm shadow-lg shadow-purple-600/25 transition active:scale-[0.99]">
-                    <i class="fa-solid fa-repeat mr-2"></i> Kích Hoạt Chế Độ Nháy Lại
-                </button>
                 
-                <div class="mt-4 p-4 bg-slate-950 border border-slate-800/80 rounded-xl">
-                    <span class="text-xs text-slate-500 block mb-1">Kết quả phản hồi từ Bi Chuyên Nháy:</span>
-                    <p id="biResponse" class="text-purple-400 font-medium italic min-h-[24px]">
-                        "Chưa có câu lệnh nào được nhập..."
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- SERVICES & PRICING GRID -->
-        <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl flex flex-col justify-between hover:border-purple-600/50 transition">
-                <div>
-                    <div class="w-10 h-10 rounded-lg bg-purple-950 text-purple-400 flex items-center justify-center font-bold mb-4">
-                        <i class="fa-solid fa-face-laugh"></i>
+                <div class="space-y-4 text-center">
+                    <button id="micBtn" onclick="toggleVoiceRecognition()" 
+                        class="w-20 h-20 mx-auto bg-blue-600 hover:bg-blue-500 rounded-full flex items-center justify-center text-2xl shadow-lg shadow-blue-600/40 transition active:scale-95">
+                        <i class="fa-solid fa-microphone" id="micIcon"></i>
+                    </button>
+                    <p id="micStatus" class="text-xs text-slate-400 font-medium">Trạng thái: Sẵn sàng ghi âm giọng nói...</p>
+                    
+                    <div class="p-4 bg-slate-950 border border-slate-800 rounded-xl text-left">
+                        <span class="text-[11px] text-slate-500 block mb-1">Kết quả nháy & phát âm:</span>
+                        <p id="voiceResult" class="text-pink-400 font-semibold italic text-sm min-h-[22px]">
+                            Chưa có âm thanh đầu vào...
+                        </p>
                     </div>
-                    <h4 class="font-bold text-base mb-2">Nháy Trực Tiếp</h4>
-                    <p class="text-xs text-slate-400 mb-4">Nháy lại từng câu thoại ngắn ngay lập tức trong các cuộc trò chuyện vui vẻ hoặc trêu ghẹo bạn bè.</p>
                 </div>
-                <div class="pt-4 border-t border-slate-800 flex justify-between items-center text-xs">
-                    <span class="text-purple-400 font-bold">10k / 5 câu</span>
-                    <span class="text-slate-500">Phổ biến</span>
-                </div>
-            </div>
+            </section>
 
-            <div class="bg-slate-900 border border-purple-500/50 p-6 rounded-2xl flex flex-col justify-between relative shadow-lg shadow-purple-950/50">
-                <div class="absolute -top-3 right-4 bg-purple-600 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">Hot</div>
+            <!-- TOOL 2: VIẾT VĂN BẢN & PHÁT ÂM GIỌNG GOOGLE -->
+            <section class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl flex flex-col justify-between">
                 <div>
-                    <div class="w-10 h-10 rounded-lg bg-purple-950 text-purple-400 flex items-center justify-center font-bold mb-4">
-                        <i class="fa-solid fa-volume-high"></i>
-                    </div>
-                    <h4 class="font-bold text-base mb-2">Nháy Đuổi Ngữ Điệu</h4>
-                    <p class="text-xs text-slate-400 mb-4">Sao chép đúng 100% tông giọng, biểu cảm và ngữ điệu câu nói của bạn mà không sai một nhịp.</p>
+                    <h3 class="text-base font-bold mb-2 flex items-center text-blue-300">
+                        <i class="fa-solid fa-volume-bolt mr-2 text-blue-400"></i> Viết Văn Bản & Đọc Giọng Google
+                    </h3>
+                    <p class="text-xs text-slate-400 mb-4">Gõ bất kỳ câu nói nào bạn muốn Long nháy lại, hệ thống sẽ chuyển đổi thành âm thanh giọng chị Google ngay lập tức.</p>
                 </div>
-                <div class="pt-4 border-t border-slate-800 flex justify-between items-center text-xs">
-                    <span class="text-purple-400 font-bold">50k / buổi</span>
-                    <span class="text-purple-300 font-semibold">Khuyên dùng</span>
-                </div>
-            </div>
 
-            <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl flex flex-col justify-between hover:border-purple-600/50 transition">
-                <div>
-                    <div class="w-10 h-10 rounded-lg bg-purple-950 text-purple-400 flex items-center justify-center font-bold mb-4">
-                        <i class="fa-solid fa-infinity"></i>
+                <div class="space-y-4">
+                    <div>
+                        <textarea id="textInput" rows="2" placeholder="Ví dụ: Bạn nói sao, chị Google đọc lại y chang vậy..." 
+                            class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:border-blue-500 transition resize-none"></textarea>
                     </div>
-                    <h4 class="font-bold text-base mb-2">Nháy Trọn Gói</h4>
-                    <p class="text-xs text-slate-400 mb-4">Thuê Bi đi cùng suốt cả ngày, người khác nói gì Long nháy lại y hệt câu đó không ngơi nghỉ.</p>
+                    <button onclick="processTextAndSpeak()" 
+                        class="w-full bg-gradient-to-r from-blue-600 to-pink-600 hover:from-blue-500 hover:to-pink-500 font-bold py-2.5 rounded-xl text-xs shadow-lg shadow-blue-600/25 transition active:scale-[0.99]">
+                        <i class="fa-solid fa-play mr-1.5"></i> Nháy Chữ & Đọc Giọng Google
+                    </button>
+
+                    <div class="p-3 bg-slate-950 border border-slate-800 rounded-xl">
+                        <span class="text-[11px] text-slate-500 block mb-1">Bản phản hồi văn bản:</span>
+                        <p id="textResult" class="text-blue-300 font-medium italic text-sm min-h-[20px]">
+                            "Chưa có văn bản ghi nhận..."
+                        </p>
+                    </div>
                 </div>
-                <div class="pt-4 border-t border-slate-800 flex justify-between items-center text-xs">
-                    <span class="text-purple-400 font-bold">200k / ngày</span>
-                    <span class="text-slate-500">VIP</span>
-                </div>
-            </div>
+            </section>
+
+        </div>
+
+        <!-- RECENT ACTIVITY LOG -->
+        <section class="bg-slate-900 border border-slate-800 rounded-2xl p-6">
+            <h3 class="text-sm font-bold text-slate-300 mb-3 flex items-center">
+                <i class="fa-solid fa-clock-rotate-left mr-2 text-blue-400"></i> Lịch Sử Nháy Gần Đây (v3.3.0)
+            </h3>
+            <ul id="historyList" class="space-y-2 text-xs text-slate-400">
+                <li class="p-2.5 bg-slate-950 rounded-lg border border-slate-800/60 flex justify-between items-center">
+                    <span>Đã nâng cấp thành công hệ thống phát âm giọng chị Google (vi-VN)</span>
+                    <span class="text-blue-400 font-mono text-[10px]">Hệ thống</span>
+                </li>
+            </ul>
         </section>
 
     </main>
@@ -130,27 +135,150 @@
     <!-- FOOTER -->
     <footer class="border-t border-slate-800 bg-slate-900/50 py-6 text-center text-xs text-slate-500 space-y-2">
         <p>&copy; 2026 Nguyễn Hoàng Hải Long (Bi Chuyên Nháy Người Khác). All rights reserved.</p>
-        <p class="text-slate-600">Số Điện Thoại 0327770315 <span class="text-purple-400 font-semibold">Bi Thích Nháy</span> và <span class="text-purple-400 font-semibold">Nguyễn Hoàng (Hải Long)</span>.</p>
+        <p class="text-slate-600">Tương thích hoàn hảo trên <span class="text-blue-400 font-semibold">NguyễnHoàngHảiLong</span> và <span class="text-blue-400 font-semibold">Bi Thích Nháy sdt 0327770315</span>.</p>
     </footer>
 
-    <!-- INTERACTIVE SCRIPT -->
+    <!-- SCRIPT LOGIC: GOOGLE TEXT-TO-SPEECH & SPEECH RECOGNITION -->
     <script>
-        function nguoiKhacNoiYNuTheVay() {
-            const inputField = document.getElementById('userSaid');
-            const responseField = document.getElementById('biResponse');
-            const textValue = inputField.value.trim();
-
-            if (textValue === "") {
-                responseField.innerHTML = "<span class='text-red-400'>Vui lòng nhập câu nói trước khi bắt đầu nháy!</span>";
+        // Hàm cốt lõi: Sử dụng Web Speech Synthesis để phát âm giọng tiếng Việt chuẩn (Giọng chị Google)
+        function speakGoogleVoice(text) {
+            if (!('speechSynthesis' in window)) {
+                console.warn("Trình duyệt không hỗ trợ tổng hợp giọng nói.");
                 return;
             }
 
-            // Hiệu ứng giả lập phản hồi nháy lại
-            responseField.innerHTML = "<span class='text-slate-500'>Đang phân tích và xử lý...</span>";
+            // Hủy các câu đang đọc dở trước đó để phát ngay câu mới
+            window.speechSynthesis.cancel();
+
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'vi-VN'; // Thiết lập ngôn ngữ tiếng Việt
+            utterance.rate = 1.0;     // Tốc độ đọc chuẩn
+            utterance.pitch = 1.0;    // Cao độ giọng đọc
+
+            // Tìm giọng tiếng Việt tối ưu nếu có sẵn trên thiết bị (ưu tiên giọng Google tiếng Việt)
+            const voices = window.speechSynthesis.getVoices();
+            const viVoice = voices.find(v => v.lang.includes('vi') || v.lang.includes('VN'));
+            if (viVoice) {
+                utterance.voice = viVoice;
+            }
+
+            window.speechSynthesis.speak(utterance);
+        }
+
+        // Đảm bảo load danh sách voice trên các trình duyệt di động
+        if ('speechSynthesis' in window) {
+            window.speechSynthesis.onvoiceschanged = function() {
+                window.speechSynthesis.getVoices();
+            };
+        }
+
+        // Xử lý Viết văn bản và đọc bằng giọng Google
+        function processTextAndSpeak() {
+            const input = document.getElementById('textInput');
+            const result = document.getElementById('textResult');
+            const history = document.getElementById('historyList');
+            const val = input.value.trim();
+
+            if (!val) {
+                result.innerHTML = "<span class='text-red-400'>Vui lòng nhập nội dung cần nháy và đọc!</span>";
+                return;
+            }
+
+            result.innerHTML = `<span class='text-slate-500'>Đang tổng hợp giọng đọc Google...</span>`;
             
             setTimeout(() => {
-                responseField.innerHTML = `"${textValue}" <span class='text-xs bg-purple-900/50 text-purple-300 px-2 py-0.5 rounded ml-2'>(Đã nháy chuẩn v3.1.5)</span>`;
+                result.innerHTML = `"${val}" <span class='text-[10px] bg-blue-950 text-blue-300 px-2 py-0.5 rounded ml-2 font-mono'>🔊 Đã phát âm</span>`;
+                
+                // Kích hoạt giọng đọc chị Google
+                speakGoogleVoice(val);
+
+                // Thêm vào lịch sử
+                const li = document.createElement('li');
+                li.className = "p-2.5 bg-slate-950 rounded-lg border border-slate-800/60 flex justify-between items-center";
+                li.innerHTML = `<span class='truncate max-w-[70%]'>[Văn bản] "${val}"</span><span class='text-pink-400 font-mono text-[10px]'>Vừa xong</span>`;
+                history.prepend(li);
+                input.value = "";
             }, 300);
+        }
+
+        // Xử lý Nháy bằng giọng nói và đọc lại
+        let recognition = null;
+        let isRecording = false;
+
+        function toggleVoiceRecognition() {
+            const micBtn = document.getElementById('micBtn');
+            const micIcon = document.getElementById('micIcon');
+            const micStatus = document.getElementById('micStatus');
+            const voiceResult = document.getElementById('voiceResult');
+            const history = document.getElementById('historyList');
+
+            const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+            if (!SpeechRecognition) {
+                alert("Trình duyệt của bạn không hỗ trợ nhận diện giọng nói trực tiếp.");
+                micStatus.innerText = "Trạng thái: Trình duyệt không hỗ trợ API giọng nói.";
+                return;
+            }
+
+            if (!isRecording) {
+                recognition = new SpeechRecognition();
+                recognition.lang = 'vi-VN';
+                recognition.interimResults = false;
+                recognition.maxAlternatives = 1;
+
+                recognition.onstart = function() {
+                    isRecording = true;
+                    micBtn.classList.add('bg-pink-600', 'mic-pulse');
+                    micBtn.classList.remove('bg-blue-600');
+                    micIcon.className = "fa-solid fa-microphone-slash";
+                    micStatus.innerText = "Trạng thái: Đang lắng nghe giọng bạn...";
+                    voiceResult.innerHTML = "<span class='text-slate-500'>Hãy nói gì đó vào micro điện thoại...</span>";
+                };
+
+                recognition.onresult = function(event) {
+                    const speechToText = event.results[0][0].transcript;
+                    voiceResult.innerHTML = `"${speechToText}" <span class='text-[10px] bg-pink-950 text-pink-300 px-2 py-0.5 rounded ml-2 font-mono'>🔊 Đã nháy & đọc</span>`;
+                    
+                    // Phát âm thanh giọng Google theo câu vừa nhận diện
+                    speakGoogleVoice(speechToText);
+
+                    // Thêm vào lịch sử
+                    const li = document.createElement('li');
+                    li.className = "p-2.5 bg-slate-950 rounded-lg border border-slate-800/60 flex justify-between items-center";
+                    li.innerHTML = `<span class='truncate max-w-[70%]'>[Giọng nói] "${speechToText}"</span><span class='text-blue-400 font-mono text-[10px]'>Vừa xong</span>`;
+                    history.prepend(li);
+                };
+
+                recognition.onerror = function(event) {
+                    micStatus.innerText = "Trạng thái: Lỗi thu âm hoặc chưa cấp quyền micro.";
+                    voiceResult.innerHTML = "<span class='text-red-400'>Không thu được giọng nói. Thử lại nhé!</span>";
+                    stopRecordingUI();
+                };
+
+                recognition.onend = function() {
+                    stopRecordingUI();
+                };
+
+                recognition.start();
+            } else {
+                if (recognition) {
+                    recognition.stop();
+                }
+                stopRecordingUI();
+            }
+        }
+
+        function stopRecordingUI() {
+            isRecording = false;
+            const micBtn = document.getElementById('micBtn');
+            const micIcon = document.getElementById('micIcon');
+            const micStatus = document.getElementById('micStatus');
+            micBtn.classList.remove('bg-pink-600', 'mic-pulse');
+            micBtn.classList.add('bg-blue-600');
+            micIcon.className = "fa-solid fa-microphone";
+            if(micStatus.innerText.includes("Đang lắng nghe")) {
+                micStatus.innerText = "Trạng thái: Đã hoàn tất ghi âm và phát âm.";
+            }
         }
     </script>
 </body>
