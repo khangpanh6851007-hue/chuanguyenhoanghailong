@@ -1,42 +1,47 @@
-# 🛕 Chùa Nguyễn Hoàng Hải Long - Website Niệm Phật Đường
+# 🦜 Bi Chuyên Nháy Người Khác - Web App
 
-Website chính thức của **Chùa Nguyễn Hoàng Hải Long**, được thiết kế với giao diện hiện đại, tối ưu cho cả thiết bị di động và máy tính, mang đến không gian tìm hiểu Phật pháp thanh tịnh và trang nghiêm.
-
----
-
-## ✨ Tính Năng Nổi Bật
-
-* **Giao diện Ultra HD:** Tông màu Phật giáo trang nhã (vàng ấm, nâu gỗ, xanh bình yên).
-* **Responsive Design:** Tương thích hoàn hảo trên mọi kích thước màn hình từ điện thoại, máy tính bảng đến laptop.
-* **Tích hợp đầy đủ thông tin:**
-  * Giới thiệu về lịch sử và tôn chỉ của Niệm Phật Đường.
-  * Cập nhật các hoạt động Phật sự và chương trình từ thiện xã hội.
-  * Thông báo lịch tu học, khóa tu và các ngày lễ Sám hối định kỳ.
-  * Thông tin liên hệ chi tiết.
+> Website chính thức của **Nguyễn Hoàng Hải Long** (biệt danh: **Bi**) - Nền tảng dịch vụ cho thuê "nháy lại câu nói, ngữ điệu y như bản gốc".
 
 ---
 
-## 🛠️ Công Nghệ Sử Dụng
+## 🌟 Giới Thiệu Dự Án
+Bạn đã bao giờ muốn có một người bạn đồng hành luôn lặp lại y hệt từng câu chữ, sắc thái và phát ngôn của mình hay người khác chưa? **Bi Chuyên Nháy** ra đời để đáp ứng nhu cầu giải trí độc lạ này!
 
-* **HTML5 / CSS3:** Xây dựng cấu trúc và định dạng giao diện chuẩn hiện đại.
-* **Google Fonts & FontAwesome:** Sử dụng font chữ sắc nét và hệ thống biểu tượng tâm linh trực quan.
-* **Mobile Editors:** Tối ưu hóa để chạy trực tiếp, chỉnh sửa nhanh chóng trên các ứng dụng di động như **Acode** hoặc **TrebEdit**.
-
----
-
-## 📱 Hướng Dẫn Chạy Dự Án Trên Điện Thoại (Acode / TrebEdit)
-
-1. Tải và cài đặt ứng dụng **Acode** hoặc **TrebEdit** trên điện thoại của bạn.
-2. Tạo một thư mục dự án mới đặt tên là `chua-nguyen-hoang-hai-long`.
-3. Tạo file `index.html` và dán mã nguồn giao diện vào.
-4. Chọn tính năng **Preview** (Xem trước) trong ứng dụng để trải nghiệm trực tiếp trang web.
+* **Tên đầy đủ:** Nguyễn Hoàng Hải Long
+* **Tên thường gọi:** Bi Chuyên Nháy
+* **Dịch vụ chính:** Người khác nói gì -> Nói y như vậy.
+* **Phiên bản hiện tại:** `v3.1.5 (Acode & Trebedit Optimized)`
 
 ---
 
-## 📂 Cấu Trúc Thư Mục Dự Án
+## 📱 Tương Thích & Chỉnh Sửa (Acode / Trebedit)
+Dự án được tối ưu hóa đặc biệt dưới dạng một file `index.html` duy nhất (Single File Component), tích hợp sẵn **Tailwind CSS** qua CDN và **FontAwesome**. Bạn hoàn toàn có thể sao chép mã nguồn và dán trực tiếp vào các ứng dụng code trên điện thoại như:
+* **Acode Code Editor** (Android)
+* **Turbo Editor / Trebedit** (Android/iOS)
 
-```text
-chua-nguyen-hoang-hai-long/
-│
-├── index.html       # File giao diện chính của trang web
-└── README.md        # Tài liệu giới thiệu dự án (file này)
+---
+
+## 🚀 Hướng Dẫn Cài Đặt & Sử Dụng
+
+1. **Clone hoặc tải mã nguồn:**
+   Tải file `index.html` về máy điện thoại hoặc máy tính của bạn.
+2. **Mở bằng trình soạn thảo:**
+   * Mở ứng dụng **Acode** hoặc **Trebedit**, chọn mở file `index.html`.
+3. **Chạy thử nghiệm (Preview):**
+   * Sử dụng tính năng Preview/Live Server tích hợp sẵn trong Acode/Trebedit để trải nghiệm giao diện trực quan ngay trên thiết bị di động.
+
+---
+
+## 💼 Bảng Giá Dịch Vụ
+
+| Gói Dịch Vụ | Mô Tả Chi Tiết | Giá Cước |
+| :--- | :--- | :--- |
+| **Nháy Trực Tiếp** | Nháy lại ngay lập tức các câu thoại ngắn khi trò chuyện. | `10k / 5 câu` |
+| **Nháy Đuổi Ngữ Điệu** | Sao chép đúng 100% tông giọng và sắc thái câu nói. | `50k / buổi` |
+| **Nháy Trọn Gói (VIP)** | Đồng hành suốt ngày, người khác nói gì Long nháy lại y hệt không ngơi nghỉ. | `200k / ngày` |
+
+---
+
+## 🛡️ Bản Quyền & Tác Giả
+* Phát triển bởi **Nguyễn Hoàng Hải Long (Bi)**.
+* Bản quyền &copy; 2026. All rights reserved.
